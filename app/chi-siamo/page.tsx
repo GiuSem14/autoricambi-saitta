@@ -1,0 +1,88 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { BUSINESS_NAME, CITY, WHATSAPP_URL, ORARI } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Chi Siamo – Autoricambi Saitta | Piazza Armerina",
+  description:
+    "Scopri chi siamo: Autoricambi Saitta a Piazza Armerina (EN). Anni di esperienza nel settore dei ricambi auto, con competenza e disponibilità.",
+};
+
+export default function ChiSiamoPage() {
+  return (
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-14">
+        <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
+          La nostra storia
+        </span>
+        <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-6">
+          Chi siamo
+        </h1>
+        <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
+          <p>
+            <strong className="text-brand-white">{BUSINESS_NAME}</strong> è un punto
+            di riferimento per i ricambi auto a {CITY} e nella provincia di Enna.
+            Con oltre 20 anni di esperienza nel settore, offriamo un servizio
+            professionale, rapido e competente.
+          </p>
+          <p>
+            Il nostro magazzino conta ricambi nuovi e usati per le principali marche
+            automobilistiche europee, giapponesi e americane. Per i pezzi non
+            presenti in stock, attiviamo ordinazioni rapide con tempi di consegna
+            contenuti.
+          </p>
+          <p>
+            La nostra filosofia è semplice: rispondere velocemente, dare la giusta
+            consulenza e trovare il ricambio giusto al prezzo corretto. Puoi
+            contattarci direttamente su WhatsApp con i dati del tuo veicolo.
+          </p>
+        </div>
+      </div>
+
+      {/* Valori */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+        {[
+          { titolo: "Esperienza", desc: "Oltre 20 anni nel settore dei ricambi auto in Sicilia.", icona: "🏅" },
+          { titolo: "Rapidità", desc: "Risposta in meno di un'ora su WhatsApp. Ordini gestiti in giornata.", icona: "⚡" },
+          { titolo: "Competenza", desc: "Ti aiutiamo a identificare il ricambio esatto per il tuo veicolo.", icona: "🔍" },
+        ].map((v) => (
+          <div key={v.titolo} className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+            <div className="text-3xl mb-3">{v.icona}</div>
+            <h3 className="text-brand-white font-semibold text-lg mb-2">{v.titolo}</h3>
+            <p className="text-gray-400 text-sm">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Orari */}
+      <div className="bg-[#111111] border border-gray-800 rounded-2xl p-8 mb-10">
+        <h2 className="text-xl font-bold text-brand-white mb-6">Orari di apertura</h2>
+        <ul className="space-y-3">
+          {ORARI.map((o) => (
+            <li key={o.giorno} className="flex justify-between items-center border-b border-gray-800 pb-3 last:border-0 last:pb-0">
+              <span className="text-gray-400">{o.giorno}</span>
+              <span className="text-brand-white font-medium">{o.orario}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-green-500 text-white font-bold px-6 py-3 rounded-xl transition-all"
+        >
+          Contattaci su WhatsApp
+        </a>
+        <Link
+          href="/contatti"
+          className="inline-flex items-center justify-center border border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black font-bold px-6 py-3 rounded-xl transition-all"
+        >
+          Dove siamo
+        </Link>
+      </div>
+    </div>
+  );
+}
