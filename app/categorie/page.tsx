@@ -9,14 +9,13 @@ export const metadata: Metadata = {
 };
 
 const CATEGORIE = [
-  { nome: "Motore e trasmissione", icona: "⚙️", esempi: "Cinghie, filtri, pistoni, olio, giunti" },
+  { nome: "Motore e trasmissione", icona: "⚙️", esempi: "Cinghie, filtri, pompe acqua, olio, giunti" },
   { nome: "Freni e sospensioni", icona: "🛞", esempi: "Dischi, pastiglie, ammortizzatori, molle" },
   { nome: "Carrozzeria e vetri", icona: "🚗", esempi: "Paraurti, specchietti, portiere, parabrezza" },
-  { nome: "Impianto elettrico", icona: "⚡", esempi: "Alternatori, motorini, sensori, centraline" },
+  { nome: "Impianto elettrico", icona: "⚡", esempi: "Alternatori, motorini, sensori, batterie" },
   { nome: "Scarico e raffreddamento", icona: "🌡️", esempi: "Radiatori, tubi, marmitta, catalizzatori" },
-  { nome: "Interni", icona: "🪑", esempi: "Sedili, cruscotti, tappetini, cinture" },
   { nome: "Illuminazione", icona: "💡", esempi: "Fari, fanali, lampade, frecce" },
-  { nome: "Pneumatici e cerchi", icona: "🔩", esempi: "Cerchi in lega, bulloni, valvole TPMS" },
+  { nome: "Accessori", icona: "🎁", esempi: "Copri sedili, copri sterzo, tappeti, caschi" },
 ];
 
 export default function CategoriePage() {
