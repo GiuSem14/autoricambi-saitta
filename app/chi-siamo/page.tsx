@@ -22,7 +22,7 @@ export default function ChiSiamoPage() {
           <p>
             <strong className="text-brand-white">{BUSINESS_NAME}</strong> è un punto
             di riferimento per i ricambi auto a {CITY} e nella provincia di Enna.
-            Con oltre 20 anni di esperienza nel settore, offriamo un servizio
+            Con oltre 50 anni di esperienza tra Enrico e suo padre, offriamo un servizio
             professionale, rapido e competente.
           </p>
           <p>
@@ -42,7 +42,7 @@ export default function ChiSiamoPage() {
       {/* Valori */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
         {[
-          { titolo: "Esperienza", desc: "Oltre 20 anni nel settore dei ricambi auto in Sicilia.", icona: "🏅" },
+          { titolo: "Esperienza", desc: "Oltre 50 anni di esperienza tra Enrico e suo padre nel settore dei ricambi auto.", icona: "🏅" },
           { titolo: "Rapidità", desc: "Risposta in meno di un'ora su WhatsApp. Ordini gestiti in giornata.", icona: "⚡" },
           { titolo: "Competenza", desc: "Ti aiutiamo a identificare il ricambio esatto per il tuo veicolo.", icona: "🔍" },
         ].map((v) => (

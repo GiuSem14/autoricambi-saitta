@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import {
   FULL_ADDRESS,
   PHONE_NUMBER,
+  MOBILE_NUMBER,
   EMAIL,
   ORARI,
   WHATSAPP_URL,
+  SERVIZI_NEGOZIO,
+  ACCESSIBILITA,
+  PAGAMENTI,
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -39,13 +43,25 @@ export default function ContattiPage() {
           />
           <ContactCard
             icon={<PhoneIcon />}
-            titolo="Telefono"
+            titolo="Telefono fisso"
             contenuto={
               <a
-                href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
+                href="tel:0935686024"
                 className="hover:text-brand-yellow transition-colors"
               >
                 {PHONE_NUMBER}
+              </a>
+            }
+          />
+          <ContactCard
+            icon={<PhoneIcon />}
+            titolo="Cellulare"
+            contenuto={
+              <a
+                href="tel:+393801575950"
+                className="hover:text-brand-yellow transition-colors"
+              >
+                {MOBILE_NUMBER}
               </a>
             }
           />
@@ -67,7 +83,8 @@ export default function ContattiPage() {
                 <WhatsAppSmallIcon />
               </div>
               <div>
-                <div className="text-brand-white font-semibold mb-2">WhatsApp</div>
+                <div className="text-brand-white font-semibold mb-1">WhatsApp</div>
+                <div className="text-gray-400 text-sm mb-3">{MOBILE_NUMBER}</div>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
@@ -107,22 +124,53 @@ export default function ContattiPage() {
         </div>
       </div>
 
+      {/* Servizi, Accessibilità, Pagamenti */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+          <h3 className="text-brand-white font-bold mb-4">Servizi</h3>
+          <ul className="space-y-2">
+            {SERVIZI_NEGOZIO.map((s) => (
+              <li key={s} className="flex items-center gap-2 text-gray-400 text-sm">
+                <span className="text-brand-yellow">✓</span> {s}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+          <h3 className="text-brand-white font-bold mb-4">Accessibilità</h3>
+          <ul className="space-y-2">
+            {ACCESSIBILITA.map((a) => (
+              <li key={a} className="flex items-center gap-2 text-gray-400 text-sm">
+                <span className="text-brand-yellow">✓</span> {a}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
+          <h3 className="text-brand-white font-bold mb-4">Pagamenti accettati</h3>
+          <ul className="space-y-2">
+            {PAGAMENTI.map((p) => (
+              <li key={p} className="flex items-center gap-2 text-gray-400 text-sm">
+                <span className="text-brand-yellow">✓</span> {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
       {/* Google Maps */}
       <div className="rounded-2xl overflow-hidden border border-gray-800">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12417.123456789!2d14.3694!3d37.3835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313e2b2b2b2b2b3%3A0x1234567890abcdef!2sPiazza%20Armerina%2C%20EN%2C%20Italia!5e0!3m2!1sit!2sit!4v1234567890"
+          src="https://maps.google.com/maps?q=Via+Giosuè+Carducci+6,+Piazza+Armerina,+EN&output=embed"
           width="100%"
           height="400"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Autoricambi Saitta – Piazza Armerina"
+          title="Autoricambi Saitta – Via Giosuè Carducci 6, Piazza Armerina"
         />
       </div>
-      <p className="mt-2 text-xs text-gray-600 text-center">
-        ⚠️ Sostituire l&apos;URL iframe con quello reale del cliente (Google Maps → Condividi → Incorpora mappa)
-      </p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { WHATSAPP_URL, CITY } from "@/lib/constants";
+import Recensioni from "@/components/Recensioni";
 
 export const metadata: Metadata = {
   title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna, Sicilia",
@@ -30,7 +31,7 @@ const SERVIZI = [
 ];
 
 const BADGES = [
-  { label: "Anni di esperienza", valore: "20+" },
+  { label: "Anni di esperienza", valore: "50+" },
   { label: "Risposta rapida", valore: "< 1h" },
   { label: "Ricambio trovato in giornata", valore: "✓" },
 ];
@@ -39,9 +40,9 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-brand-black overflow-hidden">
+      <section className="relative bg-brand-black overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(245,197,24,0.08),_transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
           <span className="inline-block bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
             {CITY} – Enna – Sicilia
           </span>
@@ -89,6 +90,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
+          Chi siamo
+        </span>
+        <h2 className="text-3xl font-bold text-brand-white mt-2 mb-6">
+          Il nostro negozio
+        </h2>
+        <div className="space-y-4 text-gray-400 text-base leading-relaxed">
+          <p>
+            Autoricambi Saitta è il punto di riferimento per i ricambi auto a Piazza Armerina
+            con oltre 50 anni di esperienza tra Enrico e suo padre. Trovi ricambi nuovi e usati per tutte le marche e modelli,
+            disponibili subito o ordinabili in tempi rapidi.
+          </p>
+          <p>
+            Enrico e il suo team ti accolgono con competenza e cordialità, aiutandoti a
+            trovare il pezzo giusto anche quando è di difficile reperibilità.
+          </p>
+          <p>
+            Vieni a trovarci in Via Giosuè Carducci 6, oppure scrivici su WhatsApp: ti
+            rispondiamo entro un&apos;ora.
+          </p>
+        </div>
+        <Link
+          href="/chi-siamo"
+          className="inline-flex items-center gap-2 mt-8 text-brand-yellow font-semibold text-sm hover:text-yellow-300 transition-colors"
+        >
+          Scopri di più →
+        </Link>
+      </section>
+
       {/* Servizi */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-brand-white text-center mb-12">
@@ -109,6 +141,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Recensioni */}
+      <Recensioni />
 
       {/* CTA finale */}
       <section className="bg-[#111111] border-t border-gray-800">

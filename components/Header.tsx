@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { BUSINESS_NAME, PHONE_NUMBER, NAV_LINKS } from "@/lib/constants";
+import { PHONE_NUMBER, NAV_LINKS } from "@/lib/constants";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,9 +14,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span className="text-brand-yellow font-bold text-xl tracking-tight">
-              {BUSINESS_NAME}
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Autoricambi Saitta"
+              height={50}
+              width={120}
+              style={{ objectFit: "contain" }}
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
