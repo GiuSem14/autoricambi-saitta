@@ -161,14 +161,14 @@ export default function ContattiPage() {
       {/* Google Maps */}
       <div className="rounded-2xl overflow-hidden border border-gray-800">
         <iframe
-          src="https://maps.google.com/maps?q=Via+Giosuè+Carducci+6,+Piazza+Armerina,+EN&output=embed"
+          src="https://maps.google.com/maps?q=Via+Giosuè+Carducci+7,+Piazza+Armerina,+EN&output=embed"
           width="100%"
           height="400"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Autoricambi Saitta – Via Giosuè Carducci 6, Piazza Armerina"
+          title="Autoricambi Saitta – Via Giosuè Carducci 7, Piazza Armerina"
         />
       </div>
     </div>
