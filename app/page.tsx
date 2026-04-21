@@ -6,7 +6,7 @@ import Recensioni from "@/components/Recensioni";
 export const metadata: Metadata = {
   title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna, Sicilia",
   description:
-    "Ricambi auto nuovi e usati a Piazza Armerina. Disponibili subito o su ordinazione. Risposta rapida via WhatsApp. Autoricambi Saitta – Piazza Armerina, Enna.",
+    "Ricambi auto nuovi a Piazza Armerina. Disponibili subito o su ordinazione. Risposta rapida via WhatsApp. Autoricambi Saitta – Piazza Armerina, Enna.",
 };
 
 const SERVIZI = [
@@ -20,7 +20,7 @@ const SERVIZI = [
     icon: "📦",
     titolo: "Su ordinazione",
     descrizione:
-      "Non trovi il pezzo che cerchi? Lo ordiniamo per te con tempi rapidi di consegna. Scrivi e ricevi un preventivo.",
+      "Non trovi il pezzo che cerchi? Lo ordiniamo per te, anche in giornata. Scrivi e ricevi un preventivo.",
   },
   {
     icon: "💬",
@@ -53,7 +53,7 @@ export default function HomePage() {
             <br className="hidden sm:block" /> o su richiesta
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-            Nuovi e usati, pronti al ritiro o ordinati per te in tempi brevi.
+            Pronti al ritiro o ordinabili anche in giornata.
             Scrivi su WhatsApp con marca, modello e anno: ti rispondiamo subito.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -101,15 +101,15 @@ export default function HomePage() {
         <div className="space-y-4 text-gray-400 text-base leading-relaxed">
           <p>
             Autoricambi Saitta è il punto di riferimento per i ricambi auto a Piazza Armerina
-            con oltre 50 anni di esperienza tra Enrico e suo padre. Trovi ricambi nuovi e usati per tutte le marche e modelli,
-            disponibili subito o ordinabili in tempi rapidi.
+            con oltre 50 anni di esperienza tra Enrico e suo padre. Trovi ricambi nuovi per tutte le marche e modelli,
+            disponibili subito o ordinabili anche in giornata.
           </p>
           <p>
             Enrico e il suo team ti accolgono con competenza e cordialità, aiutandoti a
             trovare il pezzo giusto anche quando è di difficile reperibilità.
           </p>
           <p>
-            Vieni a trovarci in Via Giosuè Carducci 6, oppure scrivici su WhatsApp: ti
+            Vieni a trovarci in Via Giosuè Carducci 7, oppure scrivici su WhatsApp: ti
             rispondiamo entro un&apos;ora.
           </p>
         </div>

@@ -26,7 +26,7 @@ export default function ChiSiamoPage() {
             professionale, rapido e competente.
           </p>
           <p>
-            Il nostro magazzino conta ricambi nuovi e usati per le principali marche
+            Il nostro magazzino conta ricambi nuovi per le principali marche
             automobilistiche europee, giapponesi e americane. Per i pezzi non
             presenti in stock, attiviamo ordinazioni rapide con tempi di consegna
             contenuti.

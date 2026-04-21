@@ -22,7 +22,7 @@ export default function Footer() {
               {BUSINESS_NAME}
             </span>
             <p className="text-sm leading-relaxed">
-              Ricambi auto nuovi e usati a Piazza Armerina. Disponibili subito o
+              Ricambi auto nuovi a Piazza Armerina. Disponibili subito o
               su ordinazione, con risposta rapida via WhatsApp.
             </p>
             <a

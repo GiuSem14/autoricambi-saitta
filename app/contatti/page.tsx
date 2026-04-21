@@ -46,7 +46,7 @@ export default function ContattiPage() {
             titolo="Telefono fisso"
             contenuto={
               <a
-                href="tel:0935686024"
+                href="tel:0935682960"
                 className="hover:text-brand-yellow transition-colors"
               >
                 {PHONE_NUMBER}

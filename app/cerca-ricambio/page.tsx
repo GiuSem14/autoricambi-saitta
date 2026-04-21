@@ -4,7 +4,7 @@ import RicambioForm from "@/components/RicambioForm";
 export const metadata: Metadata = {
   title: "Cerca Ricambio – Autoricambi Saitta | Piazza Armerina",
   description:
-    "Compila il modulo per cercare un ricambio auto a Piazza Armerina. Marca, modello, anno: ti risponderemo su WhatsApp in tempi brevi. Autoricambi Saitta.",
+    "Compila il modulo per cercare un ricambio auto a Piazza Armerina. Marca, modello, anno: ti risponderemo su WhatsApp anche in giornata. Autoricambi Saitta.",
 };
 
 export default function CercaRicambioPage() {

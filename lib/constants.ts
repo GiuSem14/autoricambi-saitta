@@ -5,7 +5,7 @@ export const REGION = "Sicilia";
 export const FULL_ADDRESS = "Via Giosuè Carducci, 7, 94015 Piazza Armerina (EN), Sicilia";
 
 export const WHATSAPP_NUMBER = "393801575950";
-export const PHONE_NUMBER = "0935 686024";
+export const PHONE_NUMBER = "0935 682960";
 export const MOBILE_NUMBER = "+39 380 157 5950";
 export const EMAIL = "enricosaitta@live.it";
 

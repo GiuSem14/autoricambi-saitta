@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const CATEGORIE = [
-  { nome: "Motore e trasmissione", icona: "⚙️", esempi: "Cinghie, filtri, pistoni, cambi, giunti" },
+  { nome: "Motore e trasmissione", icona: "⚙️", esempi: "Cinghie, filtri, pistoni, olio, giunti" },
   { nome: "Freni e sospensioni", icona: "🛞", esempi: "Dischi, pastiglie, ammortizzatori, molle" },
   { nome: "Carrozzeria e vetri", icona: "🚗", esempi: "Paraurti, specchietti, portiere, parabrezza" },
   { nome: "Impianto elettrico", icona: "⚡", esempi: "Alternatori, motorini, sensori, centraline" },
@@ -30,8 +30,7 @@ export default function CategoriePage() {
           Categorie di ricambi
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Ricambi per tutte le esigenze, disponibili in sede o ordinabili in tempi
-          rapidi. Non trovi quello che cerchi? Scrivici su WhatsApp.
+          Ricambi per tutte le esigenze, disponibili in sede o ordinabili anche in giornata. Non trovi quello che cerchi? Scrivici su WhatsApp.
         </p>
       </div>
 

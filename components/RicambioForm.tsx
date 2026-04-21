@@ -34,6 +34,7 @@ export default function RicambioForm() {
     } else if (!/^\d{4}$/.test(form.anno) || +form.anno < 1900 || +form.anno > new Date().getFullYear() + 1) {
       newErrors.anno = "Anno non valido";
     }
+    if (!form.targa.trim()) newErrors.targa = "La targa è obbligatoria";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
@@ -95,9 +96,10 @@ export default function RicambioForm() {
           onChange={(v) => handleChange("motorizzazione", v)}
         />
         <Field
-          label="Targa"
+          label="Targa *"
           placeholder="es. AB123CD"
           value={form.targa}
+          error={errors.targa}
           onChange={(v) => handleChange("targa", v)}
         />
       </div>

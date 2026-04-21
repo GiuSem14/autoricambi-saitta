@@ -9,11 +9,11 @@ import CookieManager from "@/components/CookieManager";
 export const metadata: Metadata = {
   title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna",
   description:
-    "Autoricambi Saitta: ricambi auto nuovi e usati a Piazza Armerina (EN), Sicilia. Disponibili subito o su ordinazione. Contattaci su WhatsApp per una risposta rapida.",
+    "Autoricambi Saitta: ricambi auto nuovi a Piazza Armerina (EN), Sicilia. Disponibili subito o su ordinazione. Contattaci su WhatsApp per una risposta rapida.",
   keywords: [
     "ricambi auto Piazza Armerina",
     "autoricambi Enna",
-    "ricambi usati Sicilia",
+    "ricambi auto Sicilia",
     "Autoricambi Saitta",
     "ricambi su ordinazione Piazza Armerina",
   ],
