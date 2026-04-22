@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { WHATSAPP_URL, CITY } from "@/lib/constants";
 import Recensioni from "@/components/Recensioni";
@@ -91,34 +92,47 @@ export default function HomePage() {
       </section>
 
       {/* About */}
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
-          Chi siamo
-        </span>
-        <h2 className="text-3xl font-bold text-brand-white mt-2 mb-6">
-          Il nostro negozio
-        </h2>
-        <div className="space-y-4 text-gray-400 text-base leading-relaxed">
-          <p>
-            Autoricambi Saitta è il punto di riferimento per i ricambi auto a Piazza Armerina
-            con oltre 50 anni di esperienza tra Enrico e suo padre. Trovi ricambi nuovi per tutte le marche e modelli,
-            disponibili subito o ordinabili anche in giornata.
-          </p>
-          <p>
-            Enrico e il suo team ti accolgono con competenza e cordialità, aiutandoti a
-            trovare il pezzo giusto anche quando è di difficile reperibilità.
-          </p>
-          <p>
-            Vieni a trovarci in Via Giosuè Carducci 7, oppure scrivici su WhatsApp: ti
-            rispondiamo entro un&apos;ora.
-          </p>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="flex flex-col md:flex-row gap-10 items-center">
+          <div className="w-full md:w-[60%] relative h-[300px] md:h-[420px] flex-shrink-0">
+            <Image
+              src="/images/negozio-interno.jpg"
+              alt="Interno del negozio Autoricambi Saitta a Piazza Armerina"
+              fill
+              className="rounded-lg object-cover"
+              priority
+            />
+          </div>
+          <div className="w-full md:w-[40%]">
+            <span className="text-brand-yellow text-sm font-semibold uppercase tracking-widest">
+              Chi siamo
+            </span>
+            <h2 className="text-3xl font-bold text-brand-white mt-2 mb-6">
+              Il nostro negozio
+            </h2>
+            <div className="space-y-4 text-gray-400 text-base leading-relaxed">
+              <p>
+                Autoricambi Saitta è il punto di riferimento per i ricambi auto a Piazza Armerina
+                con oltre 50 anni di esperienza tra Enrico e suo padre. Trovi ricambi nuovi per tutte le marche e modelli,
+                disponibili subito o ordinabili anche in giornata.
+              </p>
+              <p>
+                Enrico e il suo team ti accolgono con competenza e cordialità, aiutandoti a
+                trovare il pezzo giusto anche quando è di difficile reperibilità.
+              </p>
+              <p>
+                Vieni a trovarci in Via Giosuè Carducci 7, oppure scrivici su WhatsApp: ti
+                rispondiamo entro un&apos;ora.
+              </p>
+            </div>
+            <Link
+              href="/chi-siamo"
+              className="inline-flex items-center gap-2 mt-8 text-brand-yellow font-semibold text-sm hover:text-yellow-300 transition-colors"
+            >
+              Scopri di più →
+            </Link>
+          </div>
         </div>
-        <Link
-          href="/chi-siamo"
-          className="inline-flex items-center gap-2 mt-8 text-brand-yellow font-semibold text-sm hover:text-yellow-300 transition-colors"
-        >
-          Scopri di più →
-        </Link>
       </section>
 
       {/* Servizi */}
