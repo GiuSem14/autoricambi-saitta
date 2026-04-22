@@ -20,10 +20,11 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: '/images/logo.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    shortcut: '/images/logo.png',
-    apple: '/images/logo.png',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina",
@@ -40,10 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <head>
-        <link rel="icon" href="/images/logo.png" type="image/png" />
-      </head>
-      <body className="bg-brand-black text-brand-white antialiased flex flex-col min-h-screen">
+<body className="bg-brand-black text-brand-white antialiased flex flex-col min-h-screen">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LQC7VH9WWC"
           strategy="afterInteractive"
