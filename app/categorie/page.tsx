@@ -36,21 +36,23 @@ export default function CategoriePage() {
 
       <div className="mb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="relative h-[240px] md:h-[300px]">
+          <div className="relative h-[180px] md:h-[220px]">
             <Image
-              src="/images/negozio-scaffale-2.jpg"
+              src="/images/negozio-scaffale.jpg"
               alt="Scaffale oli e lubrificanti nel magazzino Autoricambi Saitta"
               fill
               className="rounded-lg object-cover"
+              style={{ objectPosition: 'center top' }}
               priority
             />
           </div>
-          <div className="relative h-[240px] md:h-[300px]">
+          <div className="relative h-[180px] md:h-[220px]">
             <Image
-              src="/images/negozio-scaffale.jpg"
-              alt="Scaffale prodotti Bardahl nel magazzino Autoricambi Saitta"
+              src="/images/negozio-scaffale-2.jpg"
+              alt="Scaffale prodotti nel magazzino Autoricambi Saitta"
               fill
               className="rounded-lg object-cover"
+              style={{ objectPosition: 'center top' }}
               priority
             />
           </div>
