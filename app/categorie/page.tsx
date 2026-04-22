@@ -36,26 +36,22 @@ export default function CategoriePage() {
 
       <div className="mb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="relative h-[180px] md:h-[220px]">
-            <Image
-              src="/images/negozio-scaffale.jpg"
-              alt="Scaffale oli e lubrificanti nel magazzino Autoricambi Saitta"
-              fill
-              className="rounded-lg object-cover"
-              style={{ objectPosition: 'center top' }}
-              priority
-            />
-          </div>
-          <div className="relative h-[180px] md:h-[220px]">
-            <Image
-              src="/images/negozio-scaffale-2.jpg"
-              alt="Scaffale prodotti nel magazzino Autoricambi Saitta"
-              fill
-              className="rounded-lg object-cover"
-              style={{ objectPosition: 'center top' }}
-              priority
-            />
-          </div>
+          <Image
+            src="/images/negozio-scaffale.jpg"
+            alt="Scaffale oli e lubrificanti nel magazzino Autoricambi Saitta"
+            width={800}
+            height={600}
+            className="rounded-lg w-full h-auto"
+            priority
+          />
+          <Image
+            src="/images/negozio-scaffale-2.jpg"
+            alt="Scaffale prodotti nel magazzino Autoricambi Saitta"
+            width={800}
+            height={600}
+            className="rounded-lg w-full h-auto"
+            priority
+          />
         </div>
         <p className="text-center text-gray-500 text-sm mt-3">
           Il nostro magazzino sempre rifornito
