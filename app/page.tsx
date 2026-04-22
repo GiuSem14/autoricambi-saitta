@@ -11,22 +11,22 @@ export const metadata: Metadata = {
 
 const SERVIZI = [
   {
-    icon: "🔧",
-    titolo: "Ricambi disponibili",
+    icon: "🏅",
+    titolo: "Una Tradizione di Famiglia",
     descrizione:
-      "Ampia selezione di ricambi pronti per il ritiro immediato in sede. Auto di tutte le marche e modelli.",
+      "Oltre 50 anni di passione ed esperienza trasmessi di padre in figlio. Siamo il punto di riferimento nel settore dei ricambi auto.",
   },
   {
-    icon: "📦",
-    titolo: "Su ordinazione",
+    icon: "⚡",
+    titolo: "Risposte in Tempo Reale",
     descrizione:
-      "Non trovi il pezzo che cerchi? Lo ordiniamo per te, anche in giornata. Scrivi e ricevi un preventivo.",
+      "Il tuo tempo è prezioso. Ricevi assistenza su WhatsApp in meno di un'ora e spediamo i tuoi ordini nella stessa giornata.",
   },
   {
-    icon: "💬",
-    titolo: "Supporto tecnico",
+    icon: "🔍",
+    titolo: "Supporto Tecnico Dedicato",
     descrizione:
-      "Il nostro team ti aiuta a identificare il ricambio giusto per il tuo veicolo, anche via WhatsApp.",
+      "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.",
   },
 ];
 
@@ -49,12 +49,12 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
             Ricambi auto a{" "}
             <span className="text-brand-yellow">Piazza Armerina</span>
-            <br className="hidden sm:block" /> disponibili subito
-            <br className="hidden sm:block" /> o su richiesta
+            <br className="hidden sm:block" /> subito disponibili
+            <br className="hidden sm:block" /> o su ordinazione
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-            Pronti al ritiro o ordinabili anche in giornata.
-            Scrivi su WhatsApp con marca, modello e anno: ti rispondiamo subito.
+            Evita attese inutili. Contattaci su WhatsApp indicando marca, modello e anno:
+            verifichiamo la disponibilità in tempo reale e prepariamo il tuo ordine anche per il ritiro in giornata.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -64,7 +64,7 @@ export default function HomePage() {
               className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-green-500 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all shadow-lg"
             >
               <WhatsAppIcon />
-              Richiedi su WhatsApp
+              Chiedi ai nostri esperti
             </a>
             <Link
               href="/cerca-ricambio"

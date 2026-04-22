@@ -16,25 +16,25 @@ export default function ChiSiamoPage() {
           La nostra storia
         </span>
         <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-6">
-          Chi siamo
+          Una storia di famiglia al servizio della tua auto
         </h1>
         <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
           <p>
-            <strong className="text-brand-white">{BUSINESS_NAME}</strong> è un punto
-            di riferimento per i ricambi auto a {CITY} e nella provincia di Enna.
-            Con oltre 50 anni di esperienza tra Enrico e suo padre, offriamo un servizio
-            professionale, rapido e competente.
+            <strong className="text-brand-white">{BUSINESS_NAME}</strong> non è solo
+            un negozio, è una tradizione che attraversa generazioni. Da oltre 50 anni,
+            l&apos;esperienza maturata da Enrico e suo padre rappresenta la massima garanzia
+            per chi cerca competenza e affidabilità a {CITY} e in tutta la provincia di Enna.
           </p>
           <p>
-            Il nostro magazzino conta ricambi nuovi per le principali marche
-            automobilistiche europee, giapponesi e americane. Per i pezzi non
-            presenti in stock, attiviamo ordinazioni rapide con tempi di consegna
-            contenuti.
+            Che si tratti di un veicolo europeo, giapponese o americano, il nostro
+            magazzino offre un vasto assortimento di ricambi nuovi e di alta qualità.
+            E se il pezzo che cerchi non è subito disponibile, lo ordiniamo per te con
+            tempi di consegna rapidissimi.
           </p>
           <p>
-            La nostra filosofia è semplice: rispondere velocemente, dare la giusta
-            consulenza e trovare il ricambio giusto al prezzo corretto. Puoi
-            contattarci direttamente su WhatsApp con i dati del tuo veicolo.
+            La nostra filosofia? Risposte veloci, consulenza tecnica e il miglior
+            rapporto qualità-prezzo. Siamo qui per rimetterti in strada nel minor
+            tempo possibile.
           </p>
         </div>
       </div>
@@ -42,9 +42,9 @@ export default function ChiSiamoPage() {
       {/* Valori */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
         {[
-          { titolo: "Esperienza", desc: "Oltre 50 anni di esperienza tra Enrico e suo padre nel settore dei ricambi auto.", icona: "🏅" },
-          { titolo: "Rapidità", desc: "Risposta in meno di un'ora su WhatsApp. Ordini gestiti in giornata.", icona: "⚡" },
-          { titolo: "Competenza", desc: "Ti aiutiamo a identificare il ricambio esatto per il tuo veicolo.", icona: "🔍" },
+          { titolo: "Una Tradizione di Famiglia", desc: "Oltre 50 anni di passione ed esperienza trasmessi di padre in figlio. Siamo il punto di riferimento nel settore dei ricambi auto.", icona: "🏅" },
+          { titolo: "Risposte in Tempo Reale", desc: "Il tuo tempo è prezioso. Ricevi assistenza su WhatsApp in meno di un'ora e spediamo i tuoi ordini nella stessa giornata.", icona: "⚡" },
+          { titolo: "Supporto Tecnico Dedicato", desc: "Niente errori, solo il pezzo giusto. Ti guidiamo nella scelta del ricambio esatto per il tuo veicolo, garantendoti compatibilità totale.", icona: "🔍" },
         ].map((v) => (
           <div key={v.titolo} className="bg-[#222222] border border-gray-800 rounded-2xl p-6">
             <div className="text-3xl mb-3">{v.icona}</div>
