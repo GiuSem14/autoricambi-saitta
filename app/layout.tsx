@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     "Autoricambi Saitta",
     "ricambi su ordinazione Piazza Armerina",
   ],
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
   openGraph: {
     title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina",
     description: "Ricambi auto disponibili subito o su ordinazione a Piazza Armerina (EN). Risposta rapida via WhatsApp.",
