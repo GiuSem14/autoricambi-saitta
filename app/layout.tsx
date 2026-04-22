@@ -19,7 +19,10 @@ export const metadata: Metadata = {
     "ricambi su ordinazione Piazza Armerina",
   ],
   icons: {
-    icon: '/images/logo.png',
+    icon: [
+      { url: '/images/logo.png', type: 'image/png' },
+    ],
+    shortcut: '/images/logo.png',
     apple: '/images/logo.png',
   },
   openGraph: {
@@ -37,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
+      <head>
+        <link rel="icon" href="/images/logo.png" type="image/png" />
+      </head>
       <body className="bg-brand-black text-brand-white antialiased flex flex-col min-h-screen">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LQC7VH9WWC"
