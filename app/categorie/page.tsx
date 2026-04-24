@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 
@@ -31,30 +30,6 @@ export default function CategoriePage() {
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
           Ricambi per tutte le esigenze, disponibili in sede o ordinabili anche in giornata. Non trovi quello che cerchi? Scrivici su WhatsApp.
-        </p>
-      </div>
-
-      <div className="mb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Image
-            src="/images/negozio-scaffale.jpg"
-            alt="Scaffale oli e lubrificanti nel magazzino Autoricambi Saitta"
-            width={800}
-            height={600}
-            className="rounded-lg w-full h-auto"
-            priority
-          />
-          <Image
-            src="/images/negozio-scaffale-2.jpg"
-            alt="Scaffale prodotti nel magazzino Autoricambi Saitta"
-            width={800}
-            height={600}
-            className="rounded-lg w-full h-auto"
-            priority
-          />
-        </div>
-        <p className="text-center text-gray-500 text-sm mt-3">
-          Il nostro magazzino sempre rifornito
         </p>
       </div>
 

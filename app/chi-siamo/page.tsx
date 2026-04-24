@@ -19,7 +19,7 @@ export default function ChiSiamoPage() {
         <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-6">
           Una storia di famiglia al servizio della tua auto
         </h1>
-        <div className="relative w-full h-[300px] md:h-[400px] mb-8">
+        <div className="relative w-full h-[350px] mb-8">
           <Image
             src="/images/negozio-esterno.jpg"
             alt="Esterno del negozio Autoricambi Saitta a Piazza Armerina"
@@ -49,7 +49,7 @@ export default function ChiSiamoPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[300px] md:h-[400px] mb-14">
+      <div className="relative w-full h-[350px] mb-14">
         <Image
           src="/images/negozio-interno.jpg"
           alt="Interno del negozio Autoricambi Saitta con scaffali di ricambi auto"
