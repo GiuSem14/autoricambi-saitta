@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_NAME, CITY, WHATSAPP_URL, ORARI } from "@/lib/constants";
 
@@ -19,15 +18,6 @@ export default function ChiSiamoPage() {
         <h1 className="text-4xl font-extrabold text-brand-white mt-2 mb-6">
           Una storia di famiglia al servizio della tua auto
         </h1>
-        <div className="relative w-full h-[300px] md:h-[400px] mb-8">
-          <Image
-            src="/images/negozio-esterno.jpg"
-            alt="Esterno del negozio Autoricambi Saitta a Piazza Armerina"
-            fill
-            className="rounded-lg object-cover"
-            priority
-          />
-        </div>
         <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
           <p>
             <strong className="text-brand-white">{BUSINESS_NAME}</strong> non è solo
@@ -47,15 +37,6 @@ export default function ChiSiamoPage() {
             tempo possibile.
           </p>
         </div>
-      </div>
-
-      <div className="relative w-full h-[300px] md:h-[400px] mb-14">
-        <Image
-          src="/images/negozio-interno.jpg"
-          alt="Interno del negozio Autoricambi Saitta con scaffali di ricambi auto"
-          fill
-          className="rounded-lg object-cover"
-        />
       </div>
 
       {/* Valori */}
