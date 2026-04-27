@@ -8,7 +8,12 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-const COOKIES = [
+const COOKIES: {
+  categoria: string;
+  colore: string;
+  descrizione?: string;
+  voci: { nome: string; tipo: string; finalita: string; durata: string; fonte: string }[];
+}[] = [
   {
     categoria: "Necessari",
     colore: "text-green-400",
@@ -25,18 +30,20 @@ const COOKIES = [
   {
     categoria: "Statistici",
     colore: "text-blue-400",
+    descrizione:
+      "Utilizzati da Google Analytics 4 per misurare il numero di visite e il comportamento degli utenti su autoricambisaitta.it. I dati sono aggregati e anonimi.",
     voci: [
       {
         nome: "_ga",
-        tipo: "Analitico",
-        finalita: "Distingue gli utenti univoci (Google Analytics)",
+        tipo: "Statistico",
+        finalita: "Google Analytics 4 — distingue gli utenti unici su autoricambisaitta.it",
         durata: "2 anni",
         fonte: "Google LLC",
       },
       {
-        nome: "_ga_*",
-        tipo: "Analitico",
-        finalita: "Mantiene lo stato della sessione (Google Analytics 4)",
+        nome: "_ga_LQC7VH9WWC",
+        tipo: "Statistico",
+        finalita: "Google Analytics 4 — mantiene lo stato della sessione su autoricambisaitta.it",
         durata: "2 anni",
         fonte: "Google LLC",
       },
@@ -89,9 +96,12 @@ export default function CookiePolicyPage() {
 
           {COOKIES.map((cat) => (
             <div key={cat.categoria} className="mb-8">
-              <h3 className={`font-semibold text-base mb-3 ${cat.colore}`}>
+              <h3 className={`font-semibold text-base mb-2 ${cat.colore}`}>
                 {cat.categoria}
               </h3>
+              {cat.descrizione && (
+                <p className="text-gray-400 text-xs mb-3">{cat.descrizione}</p>
+              )}
               <div className="overflow-x-auto rounded-xl border border-gray-800">
                 <table className="w-full text-xs">
                   <thead>
