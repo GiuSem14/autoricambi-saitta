@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'nvedHY4oBqwqSb5b1It3KdSLUGihZc7W2Z0dTuW1RAI',
   },
+  alternates: {
+    canonical: 'https://www.autoricambisaitta.it',
+  },
 };
 
 export default function RootLayout({
