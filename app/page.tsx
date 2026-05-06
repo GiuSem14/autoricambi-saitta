@@ -48,10 +48,13 @@ export default function HomePage() {
             {CITY} – Enna – Sicilia
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-white leading-tight mb-6">
-            Ricambi auto a{" "}
-            <span className="text-brand-yellow">Piazza Armerina</span>
-            <br className="hidden sm:block" /> subito disponibili
-            <br className="hidden sm:block" /> o su ordinazione
+            Ricambi auto a
+            <br className="block sm:hidden" />{" "}
+            <span className="text-brand-yellow whitespace-nowrap">Piazza Armerina</span>
+            <br /> subito disponibili
+            <br /> o{" "}
+            <br className="block sm:hidden" />
+            su ordinazione
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             Evita attese inutili. Contattaci su WhatsApp indicando marca, modello e anno:
