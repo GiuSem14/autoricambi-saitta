@@ -97,16 +97,6 @@ export default function Footer() {
             <OpenCookieManagerButton className="hover:text-brand-yellow transition-colors cursor-pointer" />
           </div>
         </div>
-
-        <div className="mt-6 pt-4 border-t border-gray-800/50 text-center text-xs text-gray-600">
-          Sito realizzato da Giuseppe Seminato –{" "}
-          <a
-            href="mailto:seminato.giuseppe98@gmail.com"
-            className="text-gray-600 no-underline hover:text-brand-yellow transition-colors"
-          >
-            seminato.giuseppe98@gmail.com
-          </a>
-        </div>
       </div>
     </footer>
   );
