@@ -43,6 +43,17 @@ export default function RicambioForm() {
     e.preventDefault();
     if (!validate()) return;
 
+    // Traccia invio form su GA4 per misurare conversioni
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "form_submit", {
+        form_name: "richiesta_ricambio",
+        targa: form.targa ? "compilata" : "vuota",
+        motorizzazione: form.motorizzazione ? "compilata" : "vuota",
+        messaggio: form.messaggio ? "compilato" : "vuoto",
+        // NON inviare dati personali come nome, telefono, email
+      });
+    }
+
     const lines = [
       `Ciao, cerco un ricambio per:`,
       `Marca: ${form.marca}`,
