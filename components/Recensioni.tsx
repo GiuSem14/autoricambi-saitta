@@ -48,6 +48,7 @@ export default function Recensioni() {
         </h2>
         <a
           href={GOOGLE_MAPS_URL}
+          data-track="Recensione Google"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-sm font-semibold px-4 py-2 rounded-full hover:bg-brand-yellow/20 transition-colors"
@@ -78,6 +79,7 @@ export default function Recensioni() {
       <div className="text-center mt-10">
         <a
           href={GOOGLE_MAPS_URL}
+          data-track="Recensione Google"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-brand-yellow hover:text-yellow-300 font-semibold text-sm transition-colors"

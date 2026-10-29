@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { WHATSAPP_NUMBER } from "@/lib/constants";
+import { trackEvent } from "@/components/SiteAnalytics";
 
 interface FormData {
   marca: string;
@@ -68,6 +69,8 @@ export default function RicambioForm() {
 
     const encoded = encodeURIComponent(lines);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank");
+    // Conta la richiesta INVIATA (apre WhatsApp col messaggio precompilato).
+    trackEvent("Richiesta ricambio inviata", "modulo");
   }
 
   function handleChange(field: keyof FormData, value: string) {

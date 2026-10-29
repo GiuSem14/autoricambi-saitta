@@ -7,6 +7,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contattaci su WhatsApp"
+      data-track-zona="pulsante flottante"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:bg-green-500 hover:scale-110 transition-all duration-200"
     >
       <svg

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 import CookieManager from "@/components/CookieManager";
+import { SiteAnalytics } from "@/components/SiteAnalytics";
 
 export const metadata: Metadata = {
   title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna",
@@ -65,6 +66,9 @@ export default function RootLayout({
         <WhatsAppButton />
         <CookieBanner />
         <CookieManager />
+        {/* Vercel Web Analytics + click su Chiama / WhatsApp / Indicazioni.
+            Senza cookie: non dipende dal consenso. */}
+        <SiteAnalytics />
       </body>
     </html>
   );
