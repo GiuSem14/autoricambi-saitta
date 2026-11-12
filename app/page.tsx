@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { WHATSAPP_URL, CITY } from "@/lib/constants";
 import Recensioni from "@/components/Recensioni";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna, Sicilia",
   description:
     "Ricambi auto nuovi a Piazza Armerina. Disponibili subito o su ordinazione. Risposta rapida via WhatsApp. Autoricambi Saitta – Piazza Armerina, Enna.",
-};
+  path: "/",
+});
 
 const SERVIZI = [
   {

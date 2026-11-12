@@ -5,7 +5,8 @@ export const metadata: Metadata = {
   title: "Cookie Policy – Autoricambi Saitta",
   description:
     "Informativa sull'uso dei cookie del sito Autoricambi Saitta ai sensi del Regolamento UE 2016/679 e del D.Lgs. 196/2003.",
-  robots: { index: false },
+  robots: { index: false, follow: true },
+  alternates: { canonical: "/cookie-policy" },
 };
 
 const COOKIES: {

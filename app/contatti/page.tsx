@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import {
   FULL_ADDRESS,
   PHONE_NUMBER,
@@ -11,11 +12,12 @@ import {
   PAGAMENTI,
 } from "@/lib/constants";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contatti – Autoricambi Saitta | Piazza Armerina, Enna",
   description:
     "Contatta Autoricambi Saitta a Piazza Armerina (EN): telefono, WhatsApp, indirizzo e orari. Ricambi auto disponibili subito o su ordinazione.",
-};
+  path: "/contatti",
+});
 
 export default function ContattiPage() {
   return (

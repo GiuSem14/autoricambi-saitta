@@ -5,7 +5,8 @@ export const metadata: Metadata = {
   title: "Privacy Policy – Autoricambi Saitta",
   description:
     "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) – Autoricambi Saitta, Piazza Armerina.",
-  robots: { index: false },
+  robots: { index: false, follow: true },
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

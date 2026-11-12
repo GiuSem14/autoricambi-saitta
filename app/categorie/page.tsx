@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Categorie Ricambi – Autoricambi Saitta | Piazza Armerina",
   description:
     "Scopri le categorie di ricambi auto disponibili presso Autoricambi Saitta a Piazza Armerina: motore, freni, carrozzeria, elettronica e molto altro.",
-};
+  path: "/categorie",
+});
 
 const CATEGORIE = [
   { nome: "Motore e trasmissione", icona: "⚙️", esempi: "Cinghie, filtri, pompe acqua, olio, giunti" },

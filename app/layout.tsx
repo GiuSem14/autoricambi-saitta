@@ -7,18 +7,16 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 import CookieManager from "@/components/CookieManager";
 import { SiteAnalytics } from "@/components/SiteAnalytics";
+import { SITE_URL, pageMetadata, storeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna",
-  description:
-    "Autoricambi Saitta: ricambi auto nuovi a Piazza Armerina (EN), Sicilia. Disponibili subito o su ordinazione. Contattaci su WhatsApp per una risposta rapida.",
-  keywords: [
-    "ricambi auto Piazza Armerina",
-    "autoricambi Enna",
-    "ricambi auto Sicilia",
-    "Autoricambi Saitta",
-    "ricambi su ordinazione Piazza Armerina",
-  ],
+  metadataBase: new URL(SITE_URL),
+  ...pageMetadata({
+    title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina, Enna",
+    description:
+      "Autoricambi Saitta: ricambi auto nuovi a Piazza Armerina (EN), Sicilia. Disponibili subito o su ordinazione. Contattaci su WhatsApp per una risposta rapida.",
+    path: "/",
+  }),
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -26,17 +24,8 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
-  openGraph: {
-    title: "Autoricambi Saitta – Ricambi Auto a Piazza Armerina",
-    description: "Ricambi auto disponibili subito o su ordinazione a Piazza Armerina (EN). Risposta rapida via WhatsApp.",
-    locale: "it_IT",
-    type: "website",
-  },
   verification: {
     google: 'nvedHY4oBqwqSb5b1It3KdSLUGihZc7W2Z0dTuW1RAI',
-  },
-  alternates: {
-    canonical: 'https://www.autoricambisaitta.it',
   },
 };
 
@@ -60,6 +49,12 @@ export default function RootLayout({
             gtag('config', 'G-LQC7VH9WWC');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(storeJsonLd()).replace(/</g, "\\u003c"),
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

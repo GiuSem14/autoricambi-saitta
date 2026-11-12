@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_NAME, CITY, WHATSAPP_URL, ORARI } from "@/lib/constants";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Chi Siamo – Autoricambi Saitta | Piazza Armerina",
   description:
     "Scopri chi siamo: Autoricambi Saitta a Piazza Armerina (EN). Anni di esperienza nel settore dei ricambi auto, con competenza e disponibilità.",
-};
+  path: "/chi-siamo",
+});
 
 export default function ChiSiamoPage() {
   return (
