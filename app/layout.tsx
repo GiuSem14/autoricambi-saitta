@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,6 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 import CookieManager from "@/components/CookieManager";
 import { SiteAnalytics } from "@/components/SiteAnalytics";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE_URL, pageMetadata, storeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -37,18 +37,8 @@ export default function RootLayout({
   return (
     <html lang="it">
 <body className="bg-brand-black text-brand-white antialiased flex flex-col min-h-screen">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-LQC7VH9WWC"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-LQC7VH9WWC');
-          `}
-        </Script>
+        {/* GA4 solo dopo il consenso ai cookie statistici */}
+        <GoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
