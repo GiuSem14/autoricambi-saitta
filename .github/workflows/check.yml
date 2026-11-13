@@ -1,0 +1,26 @@
+name: Controllo
+
+# Typecheck, lint e build su ogni push e ogni pull request.
+# Se fallisce, il ramo non va su main: Vercel costruirebbe la stessa cosa.
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
